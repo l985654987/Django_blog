@@ -14,11 +14,11 @@
 
 ## 数据库配置
 在mysql中创建名为 djangoblog 的数据库
-语句:create database djangoblog
+`create database djangoblog`
 
 ## 配置
-修改Django_blog/settings.py 中的配置
-`DATABASES = {
+修改`Django_blog/settings.py` 中的配置
+```DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoblog',
@@ -27,17 +27,15 @@
         'USER': 'root',
         'PASSWORD': '' #此密码为数据库的登录密码,如没有设置则为''.
     }
-}`
+}```
 
-在Django_blog/settings.py添加以下语句
-`STATICFILES_DIRS = [
+在`Django_blog/settings.py`添加以下语句
+```STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
-]`
+]```
 
 ## 问题相关
 如有问题请将问题发送至邮箱liuhc1995@aliyun.com,转载请评论告知,很高兴能帮助大家
-
-
 
 
 
