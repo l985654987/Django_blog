@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+<div class="posts">
+        <section class="post">
+            <header class="post-header">
+                <h1 class="post-title" style="text-align:center">{{blog.blog_title}}</h1>
+ 
+                    <p class="post-meta">
+                        发表时间:  <a class="post-author" href="#">{{ blog.write_time|date:'Y-m-d'}}</a> <a class="post-category post-category-js" href="#">{{ post.category }}</a>
+                    </p>
+            </header>
+ 
+                <div class="post-description">
+                    <p class="lead">
+                        {{ blog.blog_matter|safe }}
+                    </p>
+                </div>
+        </section>
+
+</div>
+{% endblock %}

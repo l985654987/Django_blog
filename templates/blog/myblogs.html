@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+    我的博客
+{% endblock %}
+{% block css %}
+    <style>
+        th, tr {
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+    <div  style="height: 50px"></div>
+    <div class="panel panel-default">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>博客标题</th>
+                <th>发表时间</th>
+                <th>博客类别</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for blog in blogs %}
+                <tr>
+                    <td><a href="{% url 'blog_content' blog.id %}">{{ blog.blog_title }}</a></td>
+                    <td>{{ blog.write_time |date:'Y-m-d' }}</td>
+                    <td>{{ blog.blog_type_id}}</td>
+                <td><a href="{% url 'blog_edit' blog.id %}"><i class="btn btn-btn btn-success">修改</i></a>
+                    <a href="{% url 'blog_del'  blog.id%}"><i class="btn btn-danger">删除</i></a>
+                </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+        <div style="text-align: center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        {{ pagination }}
+                    </ul>
+                </nav>
+            </div>
+{% endblock %}

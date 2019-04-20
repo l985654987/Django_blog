@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block title %}
+    注册
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <form class="form-horizontal" novalidate method="post" action="">
+                {% csrf_token %}
+                <h2 class="form-signin-heading">注册</h2>
+                {% for field in form_obj %}
+                    <div class="form-group {% if  field.errors.0 %}has-error{% endif %}">
+                        <label for="{{ field.id_for_label }}"
+                               class="col-sm-2 control-label">{{ field.label }}</label>
+                        <div class="col-sm-4">
+                            {{ field }}
+                        </div>
+                        <span class="help-block">{{ field.errors.0 }}</span>
+                    </div>
+                {% endfor %}
+            <div class="col-sm-6">
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+                        </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
