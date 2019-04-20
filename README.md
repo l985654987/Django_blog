@@ -1,5 +1,5 @@
 # Django_blog
-:+1: 基于python3.x,django1.x,mysql的博客系统
+:+1: `基于python3.x`,`django1.x`,`mysql`的博客系统
 ## 主要功能
 - 用户的登录与注册
 - 博客的创建,修改,删除和查看功能
@@ -27,15 +27,18 @@
         'USER': 'root',
         'PASSWORD': '' #此密码为数据库的登录密码,如没有设置则为''.
     }
-}```
+}
+```
 
 在`Django_blog/settings.py`添加以下语句
-```STATICFILES_DIRS = [
+```
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
-]```
+]
+```
+
 
 ## 问题相关
 如有问题请将问题发送至邮箱liuhc1995@aliyun.com,转载请评论告知,很高兴能帮助大家
-
 
 
