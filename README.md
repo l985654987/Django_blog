@@ -1,22 +1,22 @@
 # Django_blog
 :+1: `基于python3.x`,`django1.x`,`mysql`的博客系统
-## 主要功能
+### 主要功能
 - 用户的登录与注册
 - 博客的创建,修改,删除和查看功能
 - 可进行博客的分类查询
 - 可进行博客的全站检索
 - 增加了博客的分页功能
 
-## 安装须知
+### 安装须知
 在项目文件夹下打开命令窗口
 输入 `pip3 install -r requirements.txt` 下载项目所需依赖,
 如没有`pip`请自行下载.
 
-## 数据库配置
+### 数据库配置
 在mysql中创建名为 djangoblog 的数据库
 `create database djangoblog`
 
-## 配置
+### 配置
 修改`Django_blog/settings.py` 中的配置
 ```DATABASES = {
     'default': {
@@ -38,7 +38,7 @@ STATICFILES_DIRS = [
 ```
 
 
-## 问题相关
+### 问题相关
 如有问题请将问题发送至邮箱liuhc1995@aliyun.com,转载请评论告知,很高兴能帮助大家
 
 
