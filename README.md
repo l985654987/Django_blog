@@ -9,8 +9,8 @@
 
 ## 安装须知
 在项目文件夹下打开命令窗口
-输入 `pip3 install -r requirements.txt` 下载项目所需依赖
-如果没有pip请自行下载
+输入 `pip3 install -r requirements.txt` 下载项目所需依赖.
+如果没有`pip`请自行下载.
 
 ## 数据库配置
 在mysql中创建名为 djangoblog 的数据库
